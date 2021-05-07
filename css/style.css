@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+  /* Primary Colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* Neutral Colors */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background: var(--very-light-gray);
+  width: 100%;
+  margin: 20vh auto 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  color: var(--transparent-white);
+  margin-bottom: 8px;
+  height: 500px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 5vh 2vw;
+}
+
+.sedan-container {
+  background-color: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+
+.suv-container {
+  background-color: var(--dark-cyan);
+}
+
+.luxury-container {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.article-title {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin: 5% 2.5%;
+}
+
+.article-text {
+  background-color: inherit;
+  margin: 5% 2.5%;
+  height: 33%;
+  width: auto;
+}
+
+.button {
+  background-color: var(--very-light-gray);
+  border: none;
+  width: 140px;
+  height: 50px;
+  margin: 80px 80px 10px 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 25px;
+}
+
+.sedan-container .button {
+  color: var(--bright-orange);
+}
+
+.suv-container .button {
+  color: var(--dark-cyan);
+}
+
+.luxury-container .button {
+  color: var(--very-dark-cyan);
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  html {
+    margin: 5vh auto;
+  }
+  .main-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .sedan-container {
+    border-radius: 10px 10px 0 0px;
+  }
+
+  .luxury-container {
+    border-radius: 0 0 10px 10px;
+  }
+
+}
